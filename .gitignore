@@ -1,0 +1,11 @@
+
+*.class
+bin/
+bin/*
+target/
+/target/
+/local/
+
+# Intellij Specific
+*.iml
+.idea/
