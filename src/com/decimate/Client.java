@@ -397,7 +397,7 @@ public class Client extends RSApplet {
     public Sprite buySubmitHover;
     public int centerX = clientWidth / 2;
     public int centerY = clientHeight / 2;
-    public Image loadingSprites[] = new Image[3];
+    public Image loadingSprite;
     public boolean logHover = false;
     public boolean advisorHover = false;
     public Sprite[] ADVISOR = new Sprite[5];
@@ -7876,14 +7876,14 @@ public class Client extends RSApplet {
             return;
         }
 
-        if (loadingSprites[0] == null) {
+        if (loadingSprite == null) {
             super.prepareGraphics();
             return;
         }
 
         setLoadingAndLoginHovers();
 
-        super.graphics.drawImage(loadingSprites[0], 0, 0, null);
+        super.graphics.drawImage(loadingSprite, 0, 0, null);
         //super.graphics.drawImage(loadingSprites[1], 5, Client.clientHeight - 35, null);
 
         Graphics2D g2 = (Graphics2D) super.graphics;
@@ -10211,7 +10211,7 @@ if(canClick) {
         gameScreenIP = null;
         chatAreaIP = null;
         /* Null pointers for custom sprites */
-        loadingSprites = null;
+        loadingSprite = null;
         loadingPleaseWait = null;
         reestablish = null;
         // newMapBack = null;
@@ -13072,35 +13072,9 @@ if(canClick) {
         t.setPriority(10);
         t.start();
 
-        /**
-         * DOWNLOADING LOADING IMAGES *
-         */
-        try {
-            for (int i = 1; i <= 3; i++) {
-                if (!new File(signlink.findcachedir() + "load" + i + ".png").exists()) {
-                    String url = "";
-                    switch (i) {
-                        case 1:
-                            url = "https://decimate.io/files/loaders/load1.png";
-                            break;
-                        case 2:
-                            url = "https://decimate.io/files/loaders/load2.png";
-                            break;
-                        case 3:
-                            url = "https://decimate.io/files/loaders/load3.png";
-                            break;
-                    }
-                    HttpDownloadUtility.downloadFile(url, signlink.findcachedir());
-                }
-                loadingSprites[i - 1] = Toolkit.getDefaultToolkit()
-                        .getImage(signlink.findcachedir() + "load" + i + ".png");
-            }
-            super.graphics.drawImage(loadingSprites[0], 0, 0, null);
-            super.graphics.drawImage(loadingSprites[1], 5, clientHeight - 35, null);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
+        loadingSprite = Toolkit.getDefaultToolkit().getImage(signlink.findcachedir() + "load1.png");
+        super.graphics.drawImage(loadingSprite, 0, 0, null);
+        // super.graphics.drawImage(loadingSprites[1], 5, clientHeight - 35, null);
        // CacheDownloader.get().run();
 
         try {
@@ -13366,7 +13340,7 @@ if(canClick) {
             }
             setLoadingText(100, "");
             isLoading = false;
-            loadingSprites = null;
+            loadingSprite = null;
         } catch (Exception exception) {
             exception.printStackTrace();
             isLoading = false;
