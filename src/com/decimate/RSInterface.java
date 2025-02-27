@@ -3430,7 +3430,7 @@ public class RSInterface {
         }
         cacheArchive = streamLoader;
         // Decimate interfaces
-        TeleportInterface.create(textDrawingAreas);
+       // TeleportInterface.create(textDrawingAreas);
         Townboard.create(textDrawingAreas);
         CosmeticOverridesInterface.create(textDrawingAreas);
         RaidsCreationInterface.create(textDrawingAreas);
