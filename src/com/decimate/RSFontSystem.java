@@ -440,13 +440,13 @@ public class RSFontSystem extends DrawingArea {
                             try {
                                 int imageId = Integer.parseInt(effectString.substring(4));
                                 final int animatedRank = Client.getAnimatedIconId(imageId);
-                                if (animatedRank != -1) {
-                                    Sprite icon = Client.animatedRankIcon[animatedRank];
-                                    if (icon != null) {
-                                        icon.drawAdvancedSprite(drawX, (drawY + baseCharacterHeight - icon.myHeight));
-                                        drawX += icon.myWidth;
-                                    }
-                                } else {
+                              //  if (animatedRank != -1) {
+                                 //   Sprite icon = Client.animatedRankIcon[animatedRank];
+                                  //  if (icon != null) {
+                                  //      icon.drawAdvancedSprite(drawX, (drawY + baseCharacterHeight - icon.myHeight));
+                                  //      drawX += icon.myWidth;
+                                 //   }
+                              //  } else {
                                     Sprite icon = Client.spriteLoader.lookup(679 + imageId);
                                     if (icon != null) {
                                         int iconModY = icon.myHeight;
@@ -460,7 +460,7 @@ public class RSFontSystem extends DrawingArea {
                                         }
                                         drawX += icon.myWidth;
                                     }
-                                }
+                               // }
                             } catch (Exception exception) {
                                 /* empty */
                             }
@@ -714,11 +714,11 @@ public class RSFontSystem extends DrawingArea {
                                 int iconId = Integer.parseInt(effectString.substring(4));
                                 final int animatedRank = Client.getAnimatedIconId(iconId);
                                 Sprite icon = null;
-                                if (animatedRank != -1) {
-                                    icon = Client.animatedRankIcon[animatedRank];
-                                } else {
+                              //  if (animatedRank != -1) {
+                                //    icon = Client.animatedRankIcon[animatedRank];
+                               // } else {
                                     icon = Client.spriteLoader.lookup(679 + iconId);
-                                }
+                                //}
                                 if (icon != null) {
                                     finalWidth += icon.myWidth;
                                 }

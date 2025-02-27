@@ -881,80 +881,6 @@ public class RSInterface {
         Tab.tooltip = tT;
     }
 
-    public static void playerOwnedShopInterface(TextDrawingArea[] tda) {
-        RSInterface tab = addInterface(32600);
-        RSInterface tab2 = addInterface(32620);
-        RSInterface tab3 = addInterface(32622);
-        String dir = "ok/ok";
-        addSprite(32601, 0, dir);
-        addConfigButton(32602, 32603, 3, 4, dir, 164, 22, "Search", 1, 4, 968);
-        //addConfigButton(32604, 32605, 5, 6, dir, 164, 22, "Search for players", 1, 4, 969);
-        addHoverButton(32606, dir, 1, 16, 16, "Close Window", 250, 32607, 3);
-        addHoveredButton(32607, dir, 2, 16, 16, 32608);
-        addText(32610, "Player Owned Shops", tda, 2, 0xff7000, true, true);
-        addText(32611, "Search", tda, 1, 0xff7000, false, true);
-        //addText(32612, "Search a player", tda, 1, 0xff7000, false, true);
-
-        addHover(54098, 1, 0, 54099, 0, "ok/SPRITE", 72, 32, "My Shop");
-        addHovered(54099, 1, "ok/SPRITE", 72, 32, 54100);
-        addText(54101, "My Shop", tda, 1, 0xff7000, false, true);
-
-        int x = 10, y = 10;
-        tab.totalChildren(11);
-        tab.child(0, 32601, 6, 0 + y);
-        tab.child(1, 32602, 87 + x, 273 + y);
-        //tab.child(2, 32604, 360+x, 273+y);
-        tab.child(2, 32606, 463 + x, 4 + y);
-        tab.child(3, 32607, 463 + x, 4 + y);
-        tab.child(4, 32611, 90 + x, 276 + y);
-        //tab.child(6, 32612, 363+x, 276+y);
-        tab.child(5, 32620, 9 + x, 22 + y);
-        tab.child(6, 32622, 350 + x, 22 + y);
-        tab.child(7, 32610, 242 + x, 5 + y);
-        tab.child(8, 54098, 382, 272 + y);
-        tab.child(9, 54099, 382, 272 + y);
-        tab.child(10, 54101, 394, 275 + y);
-        tab2.width = 317;
-        tab2.height = 246;
-        tab2.scrollMax = 400;
-        itemGroup(32621, 7, 8, 10, 10);
-        tab2.totalChildren(1);
-        tab2.child(0, 32621, 14, 14);
-        for (int i = 0; i < 100; i++) {
-            addClickableText(32623 + i, "  " + i, "Select", tda, 0, 0xeb981f, false, true, 632);
-        }
-        tab3.width = 110;
-        tab3.height = 246;
-        tab3.scrollMax = 10 + (100 * 14);
-        tab3.totalChildren(100);
-        for (int i = 0; i < 100; i++) {
-            tab3.child(i, 32623 + i, 10, 10 + (i * 14));
-        }
-    }
-
-    public static void playerOwnedShopInterface2(TextDrawingArea[] tda) {
-        RSInterface tab = addInterface(33600);
-        RSInterface tab2 = addInterface(33620);
-        String dir = "ok/ok";
-        addSprite(33601, 7, dir);
-        addHoverButton(33606, dir, 1, 16, 16, "Close Window", 250, 32607, 3);
-        addHoveredButton(33607, dir, 2, 16, 16, 32608);
-        addText(33610, "Your Player Owned Shop", tda, 2, 0xff7000, true, true);
-        int x = 10, y = 10;
-        tab.totalChildren(5);
-        tab.child(0, 33601, 0 + x, 0 + y);
-        tab.child(1, 33606, 463 + x, 4 + y);
-        tab.child(2, 33607, 463 + x, 4 + y);
-        tab.child(3, 33620, 9 + x, 22 + y);
-        tab.child(4, 33610, 242 + x, 5 + y);
-        tab2.width = 455;
-        tab2.height = 276;
-        tab2.scrollMax = 400;
-        itemGroup(33621, 10, 8, 10, 10);
-        tab2.totalChildren(1);
-        tab2.child(0, 33621, 20, 14);
-    }
-
     public static void itemGroup(int id, int w, int h, int x, int y) {
         RSInterface rsi = addInterface(id);
         rsi.width = w;
@@ -1014,34 +940,6 @@ public class RSInterface {
             rsi.actions[2] = action3;
         }
         rsi.type = 2;
-    }
-
-    static void playerOwnedShopInterface3(TextDrawingArea[] tda) {
-        RSInterface rsi = addInterface(37000);
-        addSprite(37001, 0, "Interfaces/ResourceBag/SPRITE");
-        addSprite(37002, 1, "Interfaces/ResourceBag/SPRITE");
-        for (int i = 0; i < 28; i++)
-            addToItemGroup(37003 + i, 1, 1, 0, 0, true, new String[]{"Withdraw 1", "Withdraw 5", "Withdraw 10", "Withdraw all", "Withdraw all to bank"});
-        setChildren(30, rsi);
-        setBounds(37001, 147, 38, 0, rsi);
-        setBounds(37002, 140, 31, 1, rsi);
-        int x = 0;
-        int y = 0;
-        int counter = 0;
-        for (int i = 0; i < 28; i++) {
-            setBounds(37003 + i, 162 + x, 46 + y, 2 + i, rsi);
-            x += 42;
-            counter++;
-            if (counter == 4) {
-                x = 0;
-                y += 34;
-                counter = 0;
-            }
-        }
-        RSInterface tab = addTabInterface(37053);
-        addInventoryItemGroup2(37054, 7, 4);
-        setChildren(1, tab);
-        setBounds(37054, 0, 0, 0, tab);
     }
 
     public static void addToItemGroup(int id, int w, int h, int x, int y, boolean hasActions, String[] actions) {
@@ -3603,7 +3501,6 @@ public class RSInterface {
         itemsKeptOnDeathInterface();
         clanChatTabInterface();
         redoSpellBooks();
-        shopInterface(textDrawingAreas);
         bankInterface();
         vault();
         aura();
@@ -3652,10 +3549,7 @@ public class RSInterface {
         collectionLog(textDrawingAreas);
 
         godWars();
-        playerOwnedShopInterface(textDrawingAreas);
         Pets(textDrawingAreas);
-        playerOwnedShopInterface2(textDrawingAreas);
-        playerOwnedShopInterface3(textDrawingAreas);
         customization(textDrawingAreas);
         NpcDropsInterface.create(textDrawingAreas);
         ItemUpgradeInterface.create(textDrawingAreas);

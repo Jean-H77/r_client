@@ -1374,7 +1374,7 @@ public class Client extends RSApplet {
             for (y = length - 1; ; y--) {
                 String s = fileArray[y].getName();
                 byte[] buffer = ReadFile(cacheDir + "data/raw/" + s);
-                String tmp = s.replace(".dat", ""); // getFileNameWithoutExtension(s);
+                String tmp = s.replace(".dat", "");
                 if (tmp.startsWith(".")) {
                     continue;
                 }
@@ -1850,11 +1850,11 @@ public class Client extends RSApplet {
                                 int xPos = 11;
                                 if (playerRights > 0) {
                                     final int animatedRank = getAnimatedIconId(playerRights);
-                                    if (animatedRank != -1) {
-                                        animatedRankIcon[animatedRank].drawAdvancedSprite(xPos + 1 + offsetX, positionY - 11 + offsetY);
-                                    } else {
+                                   // if (animatedRank != -1) {
+                                    //    animatedRankIcon[animatedRank].drawAdvancedSprite(xPos + 1 + offsetX, positionY - 11 + offsetY);
+                                  //  } else {
                                         spriteLoader.lookup(679 + playerRights).drawSprite(xPos + 1 + offsetX, positionY - 11 + offsetY);
-                                    }
+                                //    }
                                     xPos += 19;
                                 }
                                 if (ironman2 > 0) {
@@ -1882,12 +1882,12 @@ public class Client extends RSApplet {
                                 newRegularFont.drawBasicString("From", xPos + offsetX, positionY + offsetY, SPLIT_CHAT_COLORS[splitChatColor], -1);
                                 xPos += newRegularFont.getTextWidth("From ");
                                 if (playerRights > 0) {
-                                    final int animatedRank = getAnimatedIconId(playerRights);
-                                    if (animatedRank != -1) {
-                                        animatedRankIcon[animatedRank].drawAdvancedSprite(xPos + 1 + offsetX, positionY - 11 + offsetY);
-                                    } else {
+                                   // final int animatedRank = getAnimatedIconId(playerRights);
+                                  //  if (animatedRank != -1) {
+                                     //   animatedRankIcon[animatedRank].drawAdvancedSprite(xPos + 1 + offsetX, positionY - 11 + offsetY);
+                                   // } else {
                                         spriteLoader.lookup(679 + playerRights).drawSprite(xPos + 1 + offsetX, positionY - 11 + offsetY);
-                                    }
+                                 //   }
                                     xPos += 19;
                                 }
                                 if (ironman2 > 0) {
@@ -1978,12 +1978,12 @@ public class Client extends RSApplet {
             }
 
             if (myRights > 0) {
-                final int animatedRank = getAnimatedIconId(myRights);
-                if (animatedRank != -1) {
-                    animatedRankIcon[animatedRank].drawAdvancedSprite(12 + offsetX, 122 + offsetY);
-                } else {
+                //final int animatedRank = getAnimatedIconId(myRights);
+              //  if (animatedRank != -1) {
+               //     animatedRankIcon[animatedRank].drawAdvancedSprite(12 + offsetX, 122 + offsetY);
+            //    } else {
                     spriteLoader.lookup(679 + myRights).drawSprite(12 + offsetX, 122 + offsetY);
-                }
+            //    }
                 offsetX += 20;
             }
 
@@ -11667,12 +11667,12 @@ if(canClick) {
                     k1 += textDrawingArea.getTextWidth("From ");
 
                     if (rights != 0) {
-                        final int animatedRank = getAnimatedIconId(rights);
-                        if (animatedRank != -1) {
-                            animatedRankIcon[animatedRank].drawAdvancedSprite(k1, l - 12);
-                        } else {
+                      //  final int animatedRank = getAnimatedIconId(rights);
+                     //   if (animatedRank != -1) {
+                    //        animatedRankIcon[animatedRank].drawAdvancedSprite(k1, l - 12);
+                   //     } else {
                             spriteLoader.lookup(679 + rights).drawSprite(k1, l - 12);
-                        }
+                    //    }
                         k1 += 12;
                     }
 
@@ -13180,11 +13180,11 @@ if(canClick) {
                 mapFunctions[l3] = new Sprite(mediaArchives, "mapfunction", l3);
             }
 
-            animatedRankIcon = new AnimatedSprite[7];
+            /*animatedRankIcon = new AnimatedSprite[7];
             for (int i = 0; i < animatedRankIcon.length; i++) {
                 animatedRankIcon[i] = new AnimatedSprite(signlink.findcachedir() + "icons/icon " + i + ".gif");
             }
-
+*/
             for (int index = 0; index < 20; index++) {
                 if (index < 17) {
                     orbs[index] = new Sprite(mediaArchives, "orbs", index);
@@ -21463,7 +21463,6 @@ if(canClick) {
                 arrowS = 0;
             }
         }
-
     }
 
     public void setCursor(int id) {
