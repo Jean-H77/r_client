@@ -13072,7 +13072,7 @@ if(canClick) {
         t.setPriority(10);
         t.start();
 
-        loadingSprite = Toolkit.getDefaultToolkit().getImage(signlink.findcachedir() + "load1.png");
+        loadingSprite = Toolkit.getDefaultToolkit().getImage(signlink.findcachedir() + "background.png");
         super.graphics.drawImage(loadingSprite, 0, 0, null);
         // super.graphics.drawImage(loadingSprites[1], 5, clientHeight - 35, null);
        // CacheDownloader.get().run();
