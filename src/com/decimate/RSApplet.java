@@ -498,7 +498,7 @@ public class RSApplet extends Applet implements Runnable, MouseListener,
                 } else if (i == KeyEvent.VK_T) {
                     Client.sendCommand("monsterteleport");
                 } else if (i == KeyEvent.VK_B) {
-                    Client.sendCommand("bossteleport");
+                    Client.sendCommand("bank");
                 } else if (i == KeyEvent.VK_M) {
                     Client.sendCommand("minigameteleport");
                 } else if (i == KeyEvent.VK_G) {
