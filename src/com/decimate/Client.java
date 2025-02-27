@@ -2604,10 +2604,10 @@ public class Client extends RSApplet {
                     inputTaken = true;
                     channel = 6;
                 }
-            } else if (super.saveClickX >= 404 && super.saveClickX <= 515 && super.saveClickY >= clientHeight - 23
+            } /*else if (super.saveClickX >= 404 && super.saveClickX <= 515 && super.saveClickY >= clientHeight - 23
                     && super.saveClickY <= clientHeight) {
                 Screenshot.buildScreenshot();
-            }
+            }*/
             if (!showChat) {
                 cButtonCPos = -1;
             }
