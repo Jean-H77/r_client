@@ -5524,7 +5524,7 @@ public class ItemDefCustom2 {
                 itemDef.actions = new String[]{null, "Wield", null, null, "Drop"};
                 break;
             case 15257:
-                itemDef.name = "Decimate Token";
+                itemDef.name = "Devote Coin";
                 itemDef.modelZoom = 2780;
                 itemDef.modelOffsetY = 1;
                 itemDef.modelOffset1 = 2;
