@@ -618,7 +618,7 @@ public class Model extends Animable {
 		if (j == 0) {
 			return null;
 		}
-        ModelHeader class21 = modelHeader[j];
+        ModelHeader class21 = modelHeader[j]; // see it's an array it can't do modelHeader[j] where j is like 100k or whatever uhad it
         if (class21 == null) {
             resourceManager.get(j);
             return null;
@@ -628,8 +628,8 @@ public class Model extends Animable {
     }
 
     public static void initialise(int i, OnDemandFetcherParent onDemandFetcher) {
-        modelHeader = new ModelHeader[100000];
-        newmodel = new boolean[100000];
+        modelHeader = new ModelHeader[100100]; //ok it's 100k, let's see what u tried to access  // increased by 100
+        newmodel = new boolean[100100];
         resourceManager = onDemandFetcher;
     }
 
