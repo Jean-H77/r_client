@@ -247,7 +247,7 @@ public final class ItemDef {
                 itemDef.actions[1] = custom.isWeapon() ? "Wield" : "Wear";
             }
         }
-
+        ItemDefCade.doCustom(itemDef);
         ItemDefCustom1.doCustom(itemDef);
         ItemDefCustom2.doCustom(itemDef);
         ItemDefCustom3.doCustom(itemDef);
@@ -272,337 +272,155 @@ public final class ItemDef {
 
     public static void applyTexturing(Model model, int id) {
         switch (id) {
-            case 20100:
-            case 20101:
-            case 20106:
-            case 20109:
-            case 20107:
-            case 20104:
-            case 20108:
-                model.setTexture(121, new int[] {97, 96});
+            case 15257://devote coin
+                model.setTexture(119, new int[] {550});
+                //model.printModelColors();
                 break;
-            case 592:
-            case 13147:
-                model.setTexture(127);
-                break;
-            case 1949:
-                model.setTexture(128);
-                break;
-            case 1523:
-                model.setTexture(128);
-                break;
-            case 8000:
-            case 20113:
-            case 20110:
-            case 20115:
-            case 20114:
-            case 20112:
-            case 20111:
-                model.setTexture(122, new int[] {97, 96});
-                break;
-            case 8008:
-            case 8009:
-            case 8010:
-            case 8011:
-            case 8012:
-            case 8013:
-            case 8014:
-                model.setTexture(124, new int[] {97, 96});
-                break;
-            case 8007:
-            case 8006:
-            case 8005:
-            case 8004:
-            case 8003:
-            case 8002:
-            case 8001:
-                model.setTexture(123, new int[] {97, 96});
-                break;
-
-            case 8015:
-            case 8016:
-            case 8017:
-            case 8018:
-            case 8019:
-            case 8020:
-                model.setTexture(125, new int[] {97,96});
-                break;
-
-            case 8021:
-            case 8022:
-            case 8023:
-            case 8024:
-            case 8025:
-            case 8026:
-                model.setTexture(126, new int[] {97, 96});
-                break;
-
-
-            case 18898:
-                model.setTexture(126, new int[] {3008, 5056});
-                model.setTexture(62, new int[] {43045, 43053});
-                break;
-
-
-            case 9104:
-                model.setTexture(119, new int[] {6573});
-                break;
-            case 7927:
-                model.setTexture(60, new int[] {6862, 6854});
-                model.setTexture(60, new int[] {939, 935});
-                model.setTexture(59, new int[] {43992, 43988, 43856});
-                break;
-
-            case 4202:
-                model.setTexture(73, new int[] {6829});
-                break;
-
-            case 20054:
-                model.setTexture(103);
-                break;
-
-            case 8038:
-                model.setTexture(116);
-                break;
-
-            case 3062:
-                model.setTexture(52, new int[] {57});
-                model.setTexture(62, new int[] {28, 37});
-                break;
-
-            case 10993:
-                model.setTexture(128, new int[] {5910, 5662, 5786, 5392});
-                break;
-
-            case 7959:
-                model.setTexture(119);
-                break;
-
-            case 6183:
-                model.setTexture(88, new int[] {60325});
-                break;
-
-            case 15372:
-                model.setTexture(103, new int[] {22410});
-                break;
-
-
-            case 1139:
+            case 1139://ref kit
                 model.setTexture(73, new int[] {4526, 4516, 4530, 4511});
                 break;
 
-            case 693:
-                model.setTexture(58, new int[] {10351});
+        ///Booster Packs / Somewhat like elixirs / Boxes
+            case 15228:
+            case 15226:
+            case 15224:
+            case 15222:
+            case 15220:
+            case 15218:
+                model.setTexture(62, new int[] {5542});
                 break;
-
-            case 691:
-                model.setTexture(62, new int[] {10351});
-                break;
-
-            case 18768:
-                model.setTexture(73);
-               // model.printModelColors();
-                break;
-
-            case 15258:
-                model.setTexture(57, new int[] {6});
-                break;
-
-            case 15257:
-                model.setTexture(119, new int[] {550});
-                break;
-
-            case 4119:
-                model.setTexture(59);
-                break;
-
-
-                case 15541:
-                case 15540:
-                case 15542:
-                case 15543:
-                model.setTexture(111, new int[] {570});
-                break;
-
-                case 15539:
-                case 15538:
-                model.setTexture(111);
-                break;
-
-            case 3849:
-                model.setTexture(128, new int[] {34507, 34371, 33099, 32956});
-                break;
-
-            case 10350:
-                model.setTexture(58, new int[] {33030});
-                break;
-
-            case 10346:
-                model.setTexture(58, new int[] {33030, 74, 57});
-                break;
-
-            case 10348:
-                model.setTexture(58, new int[] {33030, 57, 10262, 74});
-                break;
-
-            case 10352:
-                model.setTexture(58, new int[] {43150, 43146, 21766, 43270, 3230, 3226, 26, 37, 18, 20, 28});
-                break;
-
-            case 1585:
-                model.setTexture(128);
-                break;
-
-            case 7053:
-                model.setTexture(128, new int[] {8111, 8107});
-                break;
-
-            case 15501:
-                model.setTexture(114, new int[] {2998, 3007, 64404, 64427});
-                break;
-
-            case 3954:
-                model.setTexture(119, new int[] {22431, 56255, 800, 799, 12223, 807});
-                break;
-
-            case 16022:
-                model.setTexture(100, new int[] {927, 921, 0, 926, 105, 684, 804, 923, 924, 1951});
-                break;
-
-            case 19526:
-                model.setTexture(53, new int[] {32161, 32173, 32326, 32703, 32694});
-                break;
-
-                case 16020:
-                model.setTexture(101, new int[] {927, 921, 0, 926, 105, 684, 804, 923, 924, 1951});
-                break;
-
-            case 3947:
-                model.setTexture(54, new int[] {3502, 3490, 3488, 3483, 3492, 3479, 3485, 3489, 3511, 3495, 3472, 3482, 3498, 3493, 3512, 3508, 3504, 3476, 3477, 3501, 3513, 3505, 3506, 3499, 3509, 4547, 3760, 3748, 3753, 3757, 3736, 3754, 3747, 3768, 3730, 3739, 3730, 3739, 3755, 3742, 3740, 3752, 3751, 3765, 3762, 3745, 3775, 3766, 3763, 3750, 3759, 3764, 3767, 33313, 33306, 33312, 33318, 33308, 33301, 33305, 333295, 33302, 33323, 33316});
-                break;
-
-            case 6833:
-                model.setTexture(87, new int[] {22410});
-                model.setTexture(62, new int[] {2999});
-                break;
-
-            case 16012:
-                model.setTexture(86, new int[] {6430, 6798, 7223, 7467});
-                break;
-
-            case 20075:
-                model.setTexture(127);
-                break;
-
-            case 15924:
-                model.setTexture(105, new int[] {7731, 7757, 7500, 7712, 4110, 7275, 7694, 7718, 7753, 7726, 7713, 7721, 7684, 7716, 7680, 7743, 7711, 7706, 7728, 7733, 7738, 7698, 7693});
-                break;
-
-                case 16023:
-                    model.setTexture(105, new int[] {7731, 7757, 7500, 7712, 4110, 7275, 7694, 7718, 7753, 7726, 7713, 7721, 7684, 7716, 7680, 7743, 7711, 7706, 7728, 7733, 7738, 7698, 7693, 33093, 33117, 7703, 7710, 7717, 105});
-                    break;
-
-                    case 15935:
-                        model.setTexture(105, new int[] {7731, 7757, 7500, 7712, 4110, 7275, 7694, 7718, 7753, 7726, 7713, 7721, 7684, 7716, 7680, 7743, 7711, 7706, 7728, 7733, 7738, 7698, 7693, 33093, 33117, 7703, 7710, 7717, 105, 7700, 7724, 7715, 7735, 7714, 7740, 7719});
-                        break;
-            case 15818:
-                model.setTexture(105, new int[] {6694, 6704, 6729, 6719, 5403, 5398, 5388, 5393, 5380, 5385, 5424, 5408, 5378, 5376, 5383, 33117, 33129, 33107, 33119, 5411, 5406, 5429, 5413, 5414, 5396, 5401, 5419});
-                break;
-            case 15946:
-            case 16272:
-                model.setTexture(105);
-                break;
-
-            case 16184:
-            case 16045:
-                model.setTexture(104);
-                break;
-
-            case 6199:
-                model.setTexture(54, new int[] {5056});
-                model.setTexture(76, new int[] {2999});
-                break;
-            case 6200:
-                model.setTexture(79, new int[] {22410});
-                break;
-            case 15420:
+            case 15420://elixir box
                 model.setTexture(58, new int[] {1712, 1718, 1707, 1702});
                 model.setTexture(97, new int[] {20917, 20912, 20909, 20908, 20905});
                 break;
-            case 19600:
-                model.setTexture(83, new int[] {7388, 7387, 10312, 10313});
+            case 3954://box
+                model.setTexture(119, new int[] {22431, 56255, 800, 799, 12223, 807});
                 break;
-            case 19602:
-                model.setTexture(83, new int[] {120, 105, 119, 97, 94, 92, 85, 81, 80, 6570, 77, 73, 71, 64, 13, 59, 18});//120
+            case 15501://box
+                model.setTexture(114, new int[] {2998, 3007, 64404, 64427});
                 break;
-            case 19590:
-                model.setTexture(83, new int[] {10046, 8127});
+            case 6833://box
+                model.setTexture(87, new int[] {22410});
+                model.setTexture(62, new int[] {2999});
                 break;
-            case 19592:
-                model.setTexture(83, new int[] {10825, 9151, 8886});
+            case 3849://bond casket
+                model.setTexture(128, new int[] {34507, 34371, 33099, 32956});
                 break;
-            case 19594:
-                model.setTexture(83, new int[] {10046, 9151});
+            case 18768://box
+                model.setTexture(73);
+                // model.printModelColors();
                 break;
-            case 19598:
-                model.setTexture(83, new int[] {10046});
+            case 10993://scroll box op
+                model.setTexture(128, new int[] {5910, 5662, 5786, 5392});
                 break;
-            case 19596:
-                model.setTexture(83, new int[] {9151});
+            case 7959://box of boxes
+                model.setTexture(101);
                 break;
-                case 6201:
-                model.setTexture(99, new int[] {22410});
-                model.setTexture(76, new int[] {2999});
-                //model.printModelColors();
+
+         /// Misc
+            case 1949://skilling tools
+            case 1523:
+            case 1585:
+                model.setTexture(128);
                 break;
-            case 19776:
-            case 19778:
-                model.setTexture(114, new int[] {33727});
+            case 18898://ring
+                model.setTexture(126, new int[] {3008, 5056});
+                model.setTexture(62, new int[] {43045, 43053});
                 break;
-            case 19899:
-            case 19897:
-            case 19901:
-                model.setTexture(57, new int[] {63395});
+            case 9104://ring
+                model.setTexture(119, new int[] {6573});
                 break;
-            case 19921:
-            case 19923:
-                model.setTexture(57, new int[] {527, 676, 557});
+            case 4202://ring
+                model.setTexture(73, new int[] {6829});
                 break;
-            case 19873:
+            case 20054://ring
+                model.setTexture(103);
+                break;
+            case 691://Battlepass
+                model.setTexture(62, new int[] {10351});
+                break;
+            case 693://Battlepass GIM
+                model.setTexture(58, new int[] {10351});
+                break;
+            case 7053://mining item
+                model.setTexture(128, new int[] {8111, 8107});
+                break;
+            case 16022://dragon pet
+                model.setTexture(100, new int[] {927, 921, 0, 926, 105, 684, 804, 923, 924, 1951});
+                break;
+            case 16020://dragon pet
+                model.setTexture(101, new int[] {927, 921, 0, 926, 105, 684, 804, 923, 924, 1951});
+                break;
+            case 16012://upgrade token sack
+                model.setTexture(86, new int[] {6430, 6798, 7223, 7467});
+                break;
+            case 20075://partyhat
+                model.setTexture(127);
+                break;
+            case 4119://partyhat
+                model.setTexture(59);
+                break;
+            case 592://perk points
+            case 13147:
+                model.setTexture(127);
+                break;
+            case 19873://Mage armor
             case 19875:
             case 19877:
                 model.setTexture(114, new int[] {38746, 38614});
                 break;
-            case 19780:
-                model.setTexture(115, new int[] {48446});
+            case 19776://Matches mage armor
+            case 19778://Staff and offhand
+                model.setTexture(114, new int[] {33727});
                 break;
-            case 19784:
+            case 19784://Placeholder mage wep
                 model.setTexture(105, new int[] {39972});
                 break;
-            case 19786:
+            case 19786://Placeholder mage wep
                 model.setTexture(105, new int[] {60});
                 break;
-            case 19788:
-            case 19790:
+            case 19788://Big ass swords
+            case 19790://Change tex color, mad ugly
                 model.setTexture(57, new int[] {1983, 63374});
                 break;
-            case 19796:
-            case 19798:
-                model.setTexture(84, new int[] {932});
+            case 19671://Shield
+                model.setTexture(83, new int[] {5025, 8127, 7103});
                 break;
-            case 19889:
-            case 19895:
-            case 19885:
-            case 19891:
-            case 19893:
-                model.setTexture(84, new int[] {10035});
+            case 19899://Igris
+            case 19897:
+            case 19901:
+                model.setTexture(83, new int[] {63395});
+                break;
+            case 19921://Igris
+            case 19923:
+                model.setTexture(83, new int[] {527, 676, 557});
+                break;
+            case 15214://Looting bag
+                model.setTexture(77, new int[] {6430, 6798});
+                break;
+            case 3666://Occult Staff
+                model.setTexture(99, new int[] {40});
+                break;
+            case 14998://Magic watering can
+                model.setTexture(54, new int[] {43220});
+                break;
+            case 17552://bonecrusher (e)
+                model.setTexture(77, new int[] {5395, 5404, 5411, 5400});
+                break;
+            case 15065://Fused slayer helmet
+            	model.setTexture(73, new int[] {2710, 8414, 8404, 8394, 8384, 8344, 8374, 8364, 7300, 36977, 89, 108});
+                break;
+            case 6499://donation gem
+                model.setTexture(92);
+                break;
+            case 11613://diablo shield
+                model.setTexture(92, new int[] {1818});
+                break;
+            case 2399://starter key
+                model.setTexture(80);
                 break;
 
-
-
-
-
-
+        /// Purple Knights Armor
             case 19808:
             case 19810:
                 model.setTexture(117, new int[] {9151});
@@ -611,197 +429,13 @@ public final class ItemDef {
             case 19879:
             case 19883:
                 model.setTexture(117, new int[] {50628, 50765});
-                //model.printModelColors();
                 break;
             case 19915:
             case 19913:
                 model.setTexture(117, new int[] {48583, 48852, 48715});
-                //model.printModelColors();
                 break;
 
-            case 19651:
-            case 19657:
-            case 19659:
-            case 19655:
-            case 19653:
-                model.setTexture(103, new int[] {33570, 33584, 33555});
-                break;
-            case 19640:
-                model.setTexture(101, new int[] {5});
-                break;
-            case 19642:
-                model.setTexture(101, new int[] {6});
-                break;
-            case 19528:
-            case 19530:
-            case 19532:
-            case 19534:
-            case 19536:
-            case 19538:
-            case 19540:
-            case 19542:
-            case 19544:
-            case 19546:
-                model.setTexture(62, new int[] {18820});
-                //model.printModelColors();
-                break;
-            case 6203:
-                model.setTexture(93, new int[] {22410});
-                model.setTexture(62, new int[] {2999});
-                //model.printModelColors();
-                break;
-            case 6204:
-                model.setTexture(75, new int[] {22410});
-                model.setTexture(62, new int[] {2999});
-                //model.printModelColors();
-                break;
-            case 6205:
-                model.setTexture(67, new int[] {22410, 926});
-                model.setTexture(62, new int[] {2999});
-                break;
-                case 15050:
-                 model.setTexture(54, new int[] {39852, 39871});
-                //model.printModelColors();
-                break;
-            case 8:
-                model.setTexture(54, new int[] {127, 64040, 64026, 64046});
-                break;
-            case 3948:
-                model.setTexture(54, new int[] {32323, 32174, 32190, 32310, 32307, 32311, 32312, 32328, 32184, 12866, 10933, 10969, 10945});
-                break;
-            case 3949:
-                model.setTexture(54, new int[] {10675, 10687, 10711, 32328, 32187, 32186, 32184, 1461, 1433, 1431, 1441, 1425, 1420, 1447, 1435, 1422, 1423, 10804, 10816, 1462, 1434, 1432, 1442, 10840, 1426, 1421, 1448, 1436, 30409, 30268, 30267, 30265});
-                break;
-            case 3951:
-                model.setTexture(54, new int[] {35781, 32322, 35514, 9912});
-                break;
-            case 20142:
-                model.setTexture(54, new int[] {16, 8334});
-                break;
-            case 15001:
-                model.setTexture(79, new int[] {13, 11, 19, 46, 22, 8, 6, 9});
-                break;
-            case 18636:
-                //model.setTexture(79);
-                model.setTexture(79, new int[] {10302, 10442, 10453, 10308, 10448, 10291, 10297, 10301, 10441, 10452, 10307, 10447, 10290, 10296});
-                //model.printModelColors();
-                break;
-            case 19944:
-                model.setTexture(79, new int[] {48407, 48397, 48259, 47365, 48392, 51475, 50308, 50438, 51465, 51480, 51470, 10442, 10302, 10297, 10308, 10448, 10453, 10441, 10301, 10296, 10307, 10452, 10447});
-                //model.printModelColors();
-                break;
-            case 19940:
-                //model.setTexture(79);
-                model.setTexture(79, new int[] {50438, 43138, 51470, 10448, 51465, 10453, 10442, 10308, 10297, 10302, 50308, 10291, 10285, 51268, 51475, 51480, 47365, 41090, 48397, 10447, 48392, 10452, 10441, 10307, 10296, 10301, 48259, 10290, 10284, 48195, 48402, 48407});
-                //model.printModelColors();
-                break;
-            case 19941:
-                //model.setTexture(79);
-                model.setTexture(79, new int[] {47365, 48259, 10307, 10447, 10452, 10441, 47365, 48259, 10307, 10447, 10452, 10441, 41090, 50438, 50308, 43138, 10308, 10448, 10453, 10442});
-                //model.printModelColors();
-                break;
-            case 19945:
-                //model.setTexture(79);
-                model.setTexture(79, new int[] {10296, 10447, 10284, 10441, 48397, 48259, 10452, 47365, 48392, 48402, 48407, 10297, 10448, 10285, 10442, 51470, 50308, 10453, 50438, 51465, 51475, 51480});
-                //model.printModelColors();
-                break;
-            case 18447:
-                model.setTexture(99, new int[] {17826, 14768, 17819, 17824, 18846, 35200, 24986, 15773, 18731, 64143, 22817, 17570});
-                break;
-            case 18453:
-                model.setTexture(99, new int[] {14768, 23962, 17570, 17680, 17682, 17685, 18729, 18745});
-                break;
-            case 18461:
-                model.setTexture(99, new int[] {15669});
-                model.setTexture(76, new int[] {17600});
-                break;
-            case 15052:
-                model.setTexture(99, new int[] {46514, 8660, 8504});
-                break;
-            case 3666:
-                model.setTexture(99, new int[] {40});
-                break;
-            case 17550:
-                model.setTexture(73);
-                break;
-            case 19671:
-                model.setTexture(83, new int[] {5025, 8127, 7103});
-                break;
-            case 15214:
-                model.setTexture(77, new int[] {6430, 6798});
-                break;
-                case 15228:
-                case 15226:
-                case 15224:
-                case 15222:
-                case 15220:
-                case 15218:
-                model.setTexture(62, new int[] {5542});
-                break;
-                case 14998:
-                model.setTexture(54, new int[] {43220});
-                //model.printModelColors();
-                break;
-
-                case 17552:
-                model.setTexture(77, new int[] {5395, 5404, 5411, 5400});
-                //model.printModelColors();
-                break;
-                case 15065:
-            	model.setTexture(73, new int[] {2710, 8414, 8404, 8394, 8384, 8344, 8374, 8364, 7300, 36977, 89, 108});
-                //model.printModelColors();
-                break;
-            case 19020:
-            case 6499:
-
-                model.setTexture(92);
-                break;
-            case 3956:
-                model.setTexture(92, new int[] {659, 655, 663, 667, 674, 1691, 1685, 1679});
-                break;
-            case 15006:
-                model.setTexture(92, new int[] {51995, 51991, 51988, 51984, 52002, 50165, 8741, 8733, 8730});
-                break;
-            case 3958:
-                model.setTexture(92, new int[] {1681, 1677, 1687, 1694, 1691, 1687, 1697, 1420, 1033, 1693, 1672, 1426, 1686, 407, 417, 411});
-                break;
-            case 3957:
-                model.setTexture(92, new int[] {2055, 401, 407, 1679, 1685, 2055, 2053, 2572, 2577, 2591, 3228, 3469, 3083, 3092, 3088, 2053, 3080, 3084, 2584});
-                break;
-            case 3955:
-                model.setTexture(92, new int[] {1685, 1679, 1691, 1671});
-                break;
-            case 11613:
-                model.setTexture(92, new int[] {1818});
-                break;
-            case 17867:
-                model.setTexture(93, new int[] {41});
-                break;
-            case 20182:
-                model.setTexture(93, new int[] {46395, 46369, 46398, 46366, 46367, 46368, 46392, 46388, 48568, 46363, 46375, 46377, 46396, 46399, 46372, 46348, 8005});
-                break;
-            case 11607:
-                model.setTexture(93, new int[] {49422, 49452, 65184, 49470, 49428, 49408, 49443, 65175, 65178, 49423, 49427, 49419, 65182, 49433, 49436, 49439, 49448, 49431, 49420, 49446, 49434, 49430, 49438, 49453, 49449, 49425, 49447, 49458, 49463, 49459});
-                break;
-            case 11608:
-                model.setTexture(93, new int[] {49422, 49452, 65184, 49470, 49428, 49408, 49443, 65175, 65178, 49423, 49427, 49419, 65182, 49433, 49436, 49439, 49448, 49431, 49420, 49446, 49434, 49430, 49438, 49453, 49449, 49425, 49447, 49458, 49463, 49459, 12236, 20287, 33604, 31548, 49178, 49168, 49158, 49506, 49429, 49421, 49435, 49426, 49412, 49417, 49441, 49444, 49418, 49445, 49411, 49442, 49440, 49415, 49416, 49413, 49450, 49437, 49473, 49469, 49467, 49456, 49410, 49451, 49462, 49457, 49432, 49472, 926, 7876, 7088});
-                break;
-            case 11609:
-                model.setTexture(93, new int[] {49422, 49452, 65184, 49470, 49428, 49408, 49443, 65175, 65178, 49423, 49427, 49419, 65182, 49433, 49436, 49439, 49448, 49431, 49420, 49446, 49434, 49430, 49438, 49453, 49449, 49425, 49447, 49458, 49463, 49459, 49424, 49412, 49435, 49417});
-                break;
-            case 11610:
-                model.setTexture(93, new int[] {49422, 49452, 65184, 49470, 49428, 49408, 49443, 65175, 65178, 49423, 49427, 49419, 65182, 49433, 49436, 49439, 49448, 49431, 49420, 49446, 49434, 49430, 49438, 49453, 49449, 49425, 49447, 49458, 49463, 49459});
-                break;
-            case 11611:
-                model.setTexture(93, new int[] {49422, 49452, 65184, 49470, 49428, 49408, 49443, 65175, 65178, 49423, 49427, 49419, 65182, 49433, 49436, 49439, 49448, 49431, 49420, 49446, 49434, 49430, 49438, 49453, 49449, 49425, 49447, 49458, 49463, 49459, 12236, 20287, 33604, 31548, 49178, 49168, 49158, 49506, 49429, 49421, 49435, 49426, 49412, 49417, 49441, 49444, 49418, 49445, 49411, 49442, 49440, 49415, 49416, 49413, 49450, 49437, 49473, 49469, 49467, 49456, 49410, 49451, 49462, 49457, 49432, 49472, 926, 7876, 7088});
-                break;
-            case 19576:
-                model.setTexture(67, new int[] {37245, 32216, 31996, 39422, 30169, 31977, 29886, 31997});
-                model.setTexture(62, new int[] {7588, 7577, 7579, 7578, 7571, 7572, 7574, 7580, 7589, 7573, 7575});
-                break;
-            case 11623:
-                model.setTexture(62, new int[] {20});
-                break;
+            ///hollow set
             case 18003:
                 model.setTexture(67, new int[] {63155, 21344});
                 break;
@@ -817,16 +451,17 @@ public final class ItemDef {
             case 18007:
                 model.setTexture(67, new int[] {35985, 35987, 8489, 63155});
                 break;
-                case 2399:
-                model.setTexture(80);
-                //model.printModelColors();
+            case 19576:
+                model.setTexture(67, new int[] {37245, 32216, 31996, 39422, 30169, 31977, 29886, 31997});
+                model.setTexture(62, new int[] {7588, 7577, 7579, 7578, 7571, 7572, 7574, 7580, 7589, 7573, 7575});
                 break;
-            case 20249:
-                //model.printModelColors();
+            case 11623:
+                model.setTexture(62, new int[] {20});
                 break;
+
+                /// bonds
             case 15356:
             case 3851:
-                //model.printModelColors();
                 model.setTexture(0, 85);
                 break;
 
@@ -868,9 +503,6 @@ public final class ItemDef {
                 break;
             case 3850:
                 model.setTexture(0, 89);
-                break;
-            case 20002:
-                model.setTexture(72);
                 break;
         }
     }
