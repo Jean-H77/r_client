@@ -3429,8 +3429,7 @@ public class RSInterface {
             }
         }
         cacheArchive = streamLoader;
-        // Decimate interfaces
-       // TeleportInterface.create(textDrawingAreas);
+        TeleportInterface.create(textDrawingAreas);
         Townboard.create(textDrawingAreas);
         CosmeticOverridesInterface.create(textDrawingAreas);
         RaidsCreationInterface.create(textDrawingAreas);
@@ -3446,13 +3445,11 @@ public class RSInterface {
         fornitureChooser(textDrawingAreas);
         constructionWaiting();
         editClan(textDrawingAreas);
-        /** Adam_#6723 Interface **/
         questTabWorldInformation(textDrawingAreas);
         questTabAccountInformation(textDrawingAreas);
-       // teleportInterface(textDrawingAreas);
+        //teleportInterface(textDrawingAreas);
         possibleLoot(textDrawingAreas);
         leaderboard(textDrawingAreas);
-        /** Adam_#6723 Interface **/
         newStarter(textDrawingAreas);
         Starter(textDrawingAreas);
         staffTabInterface(textDrawingAreas);
