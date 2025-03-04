@@ -5090,6 +5090,7 @@ public class RSInterface {
      * = tip; }
      */
 
+    public boolean isClickableText;
     public static void addClickableText(int id, String text, String tooltip, TextDrawingArea tda[], int idx, int color, boolean center, boolean shadow, int width) {
         RSInterface tab = addTabInterface(id);
         tab.parentID = id;
@@ -5109,6 +5110,7 @@ public class RSInterface {
         tab.disabledColor = color;
         tab.enabledColor = 0xffffff;
         tab.tooltip = tooltip;
+        tab.isClickableText = true;
     }
 
     //End of Drop Table Interfaces

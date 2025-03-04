@@ -5145,6 +5145,7 @@ public class Client extends RSApplet {
                     }
                     child.beingHovered = true;
                 }
+
                 if (child.atActionType == 2 && spellSelected == 0 && mouseX >= childX && mouseY >= childY
                         && mouseX < childX + child.width && mouseY < childY + child.height) {
                     String s = child.selectedActionName;
@@ -14509,6 +14510,7 @@ if(canClick) {
                         int color;
                         if (interfaceIsSelected(child)) {
                             color = child.enabledColor;
+
                             if (hovered && child.enabledMouseOverColor != 0) {
                                 color = child.enabledMouseOverColor;
                             }
@@ -14520,7 +14522,12 @@ if(canClick) {
                             if (hovered && child.disabledMouseOverColor != 0) {
                                 color = child.disabledMouseOverColor;
                             }
+
+                            if(child.beingHovered && child.isClickableText) {
+                                color = child.enabledColor;
+                            }
                         }
+
                         if (child.atActionType == 6 && continuedDialogue) {
                             s = "Please wait...";
                             color = child.disabledColor;
@@ -14622,6 +14629,7 @@ if(canClick) {
                                 textDrawingArea.drawRegularText(child.shadowed, childX + child.width / 2 + xOffset, color, s1, l6);
                             }*/
                         }
+                        child.beingHovered = false;
                     } else if (child.type == 5) {
                         Sprite sprite;
                         if (child.enabledSpriteId != -1) {
