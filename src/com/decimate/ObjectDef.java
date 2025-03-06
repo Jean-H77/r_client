@@ -336,7 +336,11 @@ public final class ObjectDef {
 
         if (i == 25014 || i == 25026 || i == 25020 || i == 25019 || i == 25024 || i == 25025 || i == 25016 || i == 5167 || i == 5168) {
             objectDef.actions = new String[5];
+            if(i == 1583) {
+                objectDef.hasActions = false;
+            }
         }
+
         if (i == 1948) {
             objectDef.name = "Wall";
         }
