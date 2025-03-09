@@ -19,6 +19,7 @@ import org.apache.commons.lang3.time.DurationFormatUtils;
 import utils.Misc;
 
 import javax.crypto.Cipher;
+import javax.crypto.SecretKey;
 import javax.crypto.spec.SecretKeySpec;
 import javax.sound.midi.MidiSystem;
 import javax.sound.midi.MidiUnavailableException;
@@ -1363,9 +1364,21 @@ public class Client extends RSApplet {
         }
     }
 
+    public static byte[] decryptData(byte[] encryptedData, SecretKey key) throws Exception {
+        Cipher cipher = Cipher.getInstance("AES");
+        cipher.init(Cipher.DECRYPT_MODE, key);
+        return cipher.doFinal(encryptedData);
+    }
+
+    public static SecretKey loadAESKey(String base64Key) {
+        byte[] decodedKey = Base64.getDecoder().decode(base64Key);
+        return new SecretKeySpec(decodedKey, "AES");
+    }
+
     public void preloadModels() {
         String cacheDir = signlink.findcachedir();
         File file = new File(cacheDir + "data/raw/");
+        System.out.println(file.getAbsolutePath());
         File[] fileArray = file.listFiles();
         int i = 0;
         int y = 0;
@@ -1374,6 +1387,7 @@ public class Client extends RSApplet {
             for (y = length - 1; ; y--) {
                 String s = fileArray[y].getName();
                 byte[] buffer = ReadFile(cacheDir + "data/raw/" + s);
+              //  buffer = decryptData(buffer, loadAESKey("r1+2BBR4caqkAFVIuvdzKw=="));
                 String tmp = s.replace(".dat", "");
                 if (tmp.startsWith(".")) {
                     continue;
@@ -1386,6 +1400,8 @@ public class Client extends RSApplet {
                 i++;
             }
         } catch (ArrayIndexOutOfBoundsException e) {
+        } catch (Exception e) {
+            throw new RuntimeException(e);
         }
     }
 
