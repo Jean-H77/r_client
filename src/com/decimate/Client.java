@@ -5286,7 +5286,7 @@ public class Client extends RSApplet {
                                         if (child.isInventoryInterface) {
                                             for (int l3 = 4; l3 >= 3; l3--) {
                                                 if (itemDef.actions != null && itemDef.actions[l3] != null) {
-                                                    if (openInterfaceID != 24700 && openInterfaceID != 2700 && openInterfaceID != 45900 && openInterfaceID != 41900) {
+                                                    if (openInterfaceID != 24700 && openInterfaceID != 2700 && openInterfaceID != 41900) {
                                                         menuActionName[menuActionRow] = itemDef.actions[l3] + " @lre@"
                                                                 + itemDef.name;
                                                         if (l3 == 3) {
@@ -5344,7 +5344,7 @@ public class Client extends RSApplet {
                                         if (child.isInventoryInterface && itemDef.actions != null) {
                                             for (int i4 = 2; i4 >= 0; i4--) {
                                                 if (itemDef.actions[i4] != null) {
-                                                    if (openInterfaceID != 24700 && openInterfaceID != 2700 && openInterfaceID != 45900 && openInterfaceID != 41900) {
+                                                    if (openInterfaceID != 24700 && openInterfaceID != 2700 && openInterfaceID != 41900) {
                                                         menuActionName[menuActionRow] = itemDef.actions[i4] + " @lre@"
                                                                 + itemDef.name;
                                                         if (i4 == 0) {
@@ -5370,7 +5370,7 @@ public class Client extends RSApplet {
                                                 || openInterfaceID == 2700 || openInterfaceID == 24700
                                                 || openInterfaceID == 24600 && child.parentID == 3323
                                                 || child.parentID == 2901 || child.parentID == 2902
-                                                || child.parentID == 2903 || child.parentID == 2904 || openInterfaceID == 45900 || openInterfaceID == 41900;
+                                                || child.parentID == 2903 || child.parentID == 2904 || openInterfaceID == 41900;
 
                                         if (child.actions != null) {
                                             for (int j4 = child.actions.length - 1; j4 >= 0; j4--) {
@@ -8249,13 +8249,6 @@ public class Client extends RSApplet {
         if (l == 24700) {
             stream.createFrame(204);
             stream.writeWord(GEItemId);
-            return;
-        }
-        if (l == 45900) {
-            stream.createFrame(145);
-            stream.writeUnsignedWordA(45900);
-            stream.writeUnsignedWordA(slot);
-            stream.writeUnsignedWordA(nodeId);
             return;
         }
         if (l == 41900) {

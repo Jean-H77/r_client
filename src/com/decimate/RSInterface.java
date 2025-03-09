@@ -3555,8 +3555,6 @@ public class RSInterface {
         itemExchangeInterface();
         instancePortalInterface();
         fixShop();
-        posMenu(textDrawingAreas);
-        posSearch(textDrawingAreas);
         progressionOverlay(textDrawingAreas);
         dropSimulationInterface();
         achievementsInterface();
@@ -5788,105 +5786,6 @@ public class RSInterface {
         main.child(2, 46303, 7, 9);
         main.child(3, 46304, 7, 9);
         main.child(4, 46306, 8, 27);
-    }
-
-    private static void posMenu(TextDrawingArea[] tda) {
-        RSInterface main = addInterface(45900);
-        addSpriteLoader(45901, 1141);
-        addText(45902, "Player Owned Shop Menu", 0xFFFFFF, true, true, 52, tda, 2);
-
-        addHoverButtonWSpriteLoader(45903, 1143, 120, 31, "View All Listings", -1, 45904, 1);
-        addHoveredImageWSpriteLoader(45904, 1144, 120, 31, 45905);
-
-        addHoverButtonWSpriteLoader(45906, 1143, 120, 31, "Search For Item", -1, 45907, 1);
-        addHoveredImageWSpriteLoader(45907, 1144, 120, 31, 45908);
-
-        addHoverButtonWSpriteLoader(45909, 1143, 120, 31, "Search For Player", -1, 45910, 1);
-        addHoveredImageWSpriteLoader(45910, 1144, 120, 31, 45911);
-
-        addHoverButtonWSpriteLoader(45912, 1143, 120, 31, "Claim Earnings", -1, 45913, 1);
-        addHoveredImageWSpriteLoader(45913, 1144, 120, 31, 45914);
-
-
-        addText(45915, "View All Listings", 0xFFFFFF, true, true, 52, tda, 0);
-
-        addText(45916, "Search For Item", 0xFFFFFF, true, true, 52, tda, 0);
-
-        addText(45917, "Search For Player", 0xFFFFFF, true, true, 52, tda, 0);
-
-        addText(45918, "Claim Your Earnings", 0xFFFFFF, true, true, 52, tda, 0);
-
-        addText(45919, "Your Items", 0xFFFFFF, true, true, 52, tda, 0);
-
-        addToItemGroup(45920, 5, 6, 4, 4, true, new String[]{"Remove", null, null, null, null});
-
-        main.totalChildren(18);
-        main.child(0, 45901, 84, 66);
-        main.child(1, 45902, 256, 77);
-        main.child(2, 45903, 95, 105);
-        main.child(3, 45904, 95, 105);
-        main.child(4, 45906, 95, 145);
-        main.child(5, 45907, 95, 145);
-        main.child(6, 45909, 95, 185);
-        main.child(7, 45910, 95, 185);
-        main.child(8, 45912, 95, 225);
-        main.child(9, 45913, 95, 225);
-        main.child(10, 45915, 155, 115);
-        main.child(11, 45916, 155, 155);
-        main.child(12, 45917, 155, 195);
-        main.child(13, 45918, 155, 235);
-        main.child(14, 45919, 319, 112);
-        main.child(15, 45920, 226, 129);
-        main.child(16, 49114, 402, 75);
-        main.child(17, 49115, 402, 75);
-    }
-
-    private static void posSearch(TextDrawingArea[] tda) {
-        RSInterface main = addInterface(45600);
-        addSpriteLoader(45601, 1142);
-        addText(45602, "Player Owned Shop Search", 0xFFFFFF, true, true, 52, tda, 2);
-
-        addHoveredImageWSpriteLoader(45604, 1144, 120, 31, 45605);
-
-        RSInterface scroll = addInterface(70000);
-        scroll.width = 376;
-        scroll.height = 149;
-        scroll.scrollMax = 400;
-
-        addText(45612, "Search Results - X", 0xFFFFFF, true, true, 52, tda, 0);
-
-        addText(45613, "Search For Item", 0xFFFFFF, true, true, 52, tda, 0);
-
-        addText(45614, "Search For Player", 0xFFFFFF, true, true, 52, tda, 0);
-
-        addText(45615, "Reset Search", 0xFFFFFF, true, true, 52, tda, 0);
-
-        addHoverButtonWSpriteLoader(45603, 1143, 120, 31, "Search For Item", -1, 45604, 1);
-
-
-        addHoverButtonWSpriteLoader(45606, 1143, 120, 31, "Search For Player", -1, 45607, 1);
-        addHoveredImageWSpriteLoader(45607, 1144, 120, 31, 45608);
-
-        addHoverButtonWSpriteLoader(45609, 1143, 120, 31, "Reset Search", -1, 45610, 1);
-        addHoveredImageWSpriteLoader(45610, 1144, 120, 31, 45611);
-
-
-        main.totalChildren(15);
-        main.child(0, 45601, 48, 37);
-        main.child(1, 45602, 256, 48);
-        main.child(2, 45603, 69, 255);
-        main.child(3, 45604, 69, 255);
-        main.child(4, 45606, 196, 255);
-        main.child(5, 45607, 196, 255);
-        main.child(6, 45609, 323, 255);
-        main.child(7, 45610, 323, 255);
-        main.child(8, 45612, 256, 84);
-        main.child(9, 45613, 129, 265);
-        main.child(10, 45614, 256, 265);
-        main.child(11, 45615, 383, 265);
-        main.child(12, 70000, 60, 100);
-        main.child(13, 49114, 437, 47);
-        main.child(14, 49115, 437, 47);
     }
 
     public static void progressionOverlay(TextDrawingArea[] tda) {
