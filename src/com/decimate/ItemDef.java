@@ -336,6 +336,11 @@ public final class ItemDef {
             case 20054://ring
                 model.setTexture(103);
                 break;
+            case 14561://Premium Pass
+                model.setTexture(83, new int[] {6348});
+                model.setTexture(103, new int[] {64147});
+                //model.printModelColors();
+                break;
             case 691://Battlepass
                 model.setTexture(62, new int[] {10351});
                 break;

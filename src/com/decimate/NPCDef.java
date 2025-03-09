@@ -66,14 +66,7 @@ public final class NPCDef {
     public boolean isPet() {
         switch ((int) type) {
             case 1313:// Shadow pet
-            case 507: // MewTwo
-            case 535: // Squirtle
             case 399: // Mustachio
-            case 565: // Sonic
-            case 480: // Bandicoot
-            case 481: // Donkey Kong
-            case 483: // Silent Whisper
-            case 484: // Spikerz
             case 485: // Hollow
             case 486: // Exodia
             case 487: // Magician
@@ -555,7 +548,7 @@ public final class NPCDef {
                 npc.sizeXZ = 175;
                 npc.sizeY = 175;
                 break;
-            case 767:
+            case 767://?
                 npc.actions = new String[]{null, null, "Siphon", null, null};
                 npc.models = new int[1];
                 npc.models[0] = 62883;
@@ -609,7 +602,7 @@ public final class NPCDef {
                 npc.actions = new String[]{"Steal-hide", null, null, null, null};
                 npc.combatLevel = 0;
                 break;
-                case 736:
+            case 736:
                 npc.actions = new String[]{null, "Attack", null, null, null};
                 npc.models = new int[1];
                 npc.models[0] = 90243;
@@ -703,42 +696,6 @@ public final class NPCDef {
                 npc.sizeXZ = 125;
                 npc.sizeY = 125;
                 break;
-            case 508:
-                npc.actions = new String[]{null, "Attack", null, null, null};
-                npc.models = new int[1];
-                npc.models[0] = 58467;
-                npc.name = "Mewtwo";
-                npc.combatLevel = 50;
-                npc.standAnim = 808;
-                npc.walkAnim = 819;
-                npc.squaresNeeded = 1;
-                npc.sizeXZ = 50;
-                npc.sizeY = 75;
-                break;
-            case 506:
-                npc.actions = new String[]{null, "Attack", null, null, null};
-                npc.models = new int[2];
-                npc.models[0] = 58467;
-                npc.name = "Immortal Mewtwo";
-                npc.combatLevel = 160;
-                npc.standAnim = 808;
-                npc.walkAnim = 819;
-                npc.squaresNeeded = 1;
-                npc.sizeXZ = 50;
-                npc.sizeY = 75;
-                break;
-            case 507:
-                npc.actions = new String[]{"Pick up", null, null, null, null};
-                npc.models = new int[1];
-                npc.models[0] = 58467;
-                npc.name = "Mewtwo";
-                npc.combatLevel = 0;
-                npc.standAnim = 808;
-                npc.walkAnim = 819;
-                npc.squaresNeeded = 1;
-                npc.sizeXZ = 35;
-                npc.sizeY = 45;
-                break;
             case 1313:
                 npc.actions = new String[]{"Pick up", null, null, null, null};
                 npc.name = "Shadow Pet";
@@ -748,43 +705,6 @@ public final class NPCDef {
                 npc.squaresNeeded = 1;
                 npc.sizeXZ = 75;
                 npc.sizeY = 88;
-                break;
-            case 519:
-                npc.models = new int[1];
-                npc.models[0] = 28233;
-                npc.name = "Squirtle";
-                npc.description = "It's squirtle.";
-                npc.actions = new String[]{null, "Attack", null, null, null};
-                npc.combatLevel = 50;
-                npc.standAnim = 808;
-                npc.walkAnim = 819;
-                npc.squaresNeeded = 1;
-                npc.sizeXZ = 50;
-                npc.sizeY = 75;
-                break;
-            case 534:
-                npc.models = new int[2];
-                npc.models[0] = 28233;
-                npc.name = "Immortal Squirtle";
-                npc.actions = new String[]{null, "Attack", null, null, null};
-                npc.combatLevel = 160;
-                npc.standAnim = 808;
-                npc.walkAnim = 819;
-                npc.squaresNeeded = 1;
-                npc.sizeXZ = 60;
-                npc.sizeY = 85;
-                break;
-            case 535:
-                npc.models = new int[1];
-                npc.models[0] = 28233;
-                npc.name = "Squirtle";
-                npc.actions = new String[]{"Pick up", null, null, null, null};
-                npc.combatLevel = 0;
-                npc.standAnim = 808;
-                npc.walkAnim = 819;
-                npc.squaresNeeded = 1;
-                npc.sizeXZ = 35;
-                npc.sizeY = 45;
                 break;
             //End of ::train monster's
             //Tier 1 monster's
@@ -827,122 +747,6 @@ public final class NPCDef {
                 npc.sizeXZ = 80;
                 npc.sizeY = 80;
                 break;
-                case 571:
-                npc.actions = new String[]{null, "Attack", null, null, null};
-                npc.models = new int[1];
-                npc.models[0] = 94216;
-                npc.name = "Sonic";
-                npc.combatLevel = 100;
-                npc.description = "";
-                npc.standAnim = 808;
-                npc.walkAnim = 819;
-                npc.squaresNeeded = 1;
-                npc.sizeXZ = 150;
-                npc.sizeY = 150;
-                break;
-            case 564:
-                npc.actions = new String[]{null, "Attack", null, null, null};
-                npc.models = new int[2];
-                npc.models[0] = 94216;
-                npc.name = "Immortal Sonic";
-                npc.combatLevel = 200;
-                npc.standAnim = 808;
-                npc.walkAnim = 819;
-                npc.squaresNeeded = 1;
-                npc.sizeXZ = 160;
-                npc.sizeY = 160;
-                break;
-            case 565:
-                npc.actions = new String[]{"Pick up", null, null, null, null};
-                npc.models = new int[1];
-                npc.models[0] = 94216;
-                npc.name = "Sonic";
-                npc.combatLevel = 0;
-                npc.description = "";
-                npc.standAnim = 808;
-                npc.walkAnim = 819;
-                npc.squaresNeeded = 1;
-                npc.sizeXZ = 90;
-                npc.sizeY = 90;
-                break;
-            case 573:
-                npc.actions = new String[]{null, "Attack", null, null, null};
-                npc.models = new int[1];
-                npc.models[0] = 94218;
-                npc.name = "Crash bandicoot";
-                npc.combatLevel = 85;
-                npc.description = "";
-                npc.standAnim = 808;
-                npc.walkAnim = 819;
-                npc.squaresNeeded = 1;
-                npc.sizeXZ = 200;
-                npc.sizeY = 200;
-                break;
-            case 479:
-                npc.actions = new String[]{null, "Attack", null, null, null};
-                npc.models = new int[2];
-                npc.models[0] = 94218;
-                npc.name = "Immortal bandicoot";
-                npc.combatLevel = 200;
-                npc.standAnim = 808;
-                npc.walkAnim = 819;
-                npc.squaresNeeded = 1;
-                npc.sizeXZ = 200;
-                npc.sizeY = 200;
-                break;
-            case 480:
-                npc.actions = new String[]{"Pick up", null, null, null, null};
-                npc.models = new int[1];
-                npc.models[0] = 94218;
-                npc.name = "Crash bandicoot pet";
-                npc.combatLevel = 0;
-                npc.description = "";
-                npc.standAnim = 808;
-                npc.walkAnim = 819;
-                npc.squaresNeeded = 1;
-                npc.sizeXZ = 120;
-                npc.sizeY = 120;
-                break;
-
-            case 575:
-                npc.actions = new String[]{null, "Attack", null, null, null};
-                npc.models = new int[1];
-                npc.models[0] = 94219;
-                npc.name = "Donkey kong";
-                npc.combatLevel = 100;
-                npc.description = "";
-                npc.standAnim = 808;
-                npc.walkAnim = 819;
-                npc.squaresNeeded = 1;
-                npc.sizeXZ = 150;
-                npc.sizeY = 150;
-                break;
-            case 478:
-                npc.actions = new String[]{null, "Attack", null, null, null};
-                npc.models = new int[2];
-                npc.models[0] = 94219;
-                npc.name = "Immortal Donkey kong";
-                npc.combatLevel = 240;
-                npc.standAnim = 808;
-                npc.walkAnim = 819;
-                npc.squaresNeeded = 1;
-                npc.sizeXZ = 150;
-                npc.sizeY = 150;
-                break;
-            case 481:
-                npc.actions = new String[]{"Pick up", null, null, null, null};
-                npc.models = new int[1];
-                npc.models[0] = 94219;
-                npc.name = "Donkey kong pet";
-                npc.combatLevel = 0;
-                npc.description = "";
-                npc.standAnim = 808;
-                npc.walkAnim = 819;
-                npc.squaresNeeded = 1;
-                npc.sizeXZ = 50;
-                npc.sizeY = 50;
-                break;
-
             case 556:
                 npc.actions = new String[]{null, "Attack", null, null, null};
                 npc.models = new int[1];
@@ -1010,7 +814,7 @@ public final class NPCDef {
                 npc.actions = new String[]{"Pick up", null, null, null, null};
                 npc.models = new int[1];
                 npc.models[0] = 96115;
-                npc.name = "Greater diablo pet";
+                npc.name = "Diablo pet";
                 npc.description = "";
                 npc.combatLevel = 0;
                 npc.standAnim = NPCDef.forID(8350).standAnim;
@@ -1018,82 +822,6 @@ public final class NPCDef {
                 npc.squaresNeeded = 1;
                 npc.sizeXZ = 25;
                 npc.sizeY = 25;
-                break;
-            case 511:
-                npc.actions = new String[]{null, "Attack", null, null, null};
-                npc.models = new int[1];
-                npc.models[0] = 98283;
-                npc.name = "Silent whisper";
-                npc.combatLevel = 225;
-                npc.description = "";
-                npc.standAnim = 808;
-                npc.walkAnim = 819;
-                npc.squaresNeeded = 1;
-                npc.sizeXZ = 125;
-                npc.sizeY = 125;
-                break;
-            case 476:
-                npc.actions = new String[]{null, "Attack", null, null, null};
-                npc.models = new int[2];
-                npc.models[0] = 98283;
-                npc.name = "Immortal Silent whisper";
-                npc.combatLevel = 160;
-                npc.standAnim = 808;
-                npc.walkAnim = 819;
-                npc.squaresNeeded = 1;
-                npc.sizeXZ = 125;
-                npc.sizeY = 125;
-                break;
-            case 483:
-                npc.actions = new String[]{"Pick up", null, null, null, null};
-                npc.models = new int[1];
-                npc.models[0] = 98283;
-                npc.name = "Silent whisper pet";
-                npc.combatLevel = 0;
-                npc.description = "";
-                npc.standAnim = 808;
-                npc.walkAnim = 819;
-                npc.squaresNeeded = 1;
-                npc.sizeXZ = 70;
-                npc.sizeY = 70;
-                break;
-            case 512:
-                npc.actions = new String[]{null, "Attack", null, null, null};
-                npc.models = new int[1];
-                npc.models[0] = 13558;
-                npc.name = "Spikerz";
-                npc.combatLevel = 250;
-                npc.description = "";
-                npc.standAnim = 808;
-                npc.walkAnim = 819;
-                npc.squaresNeeded = 1;
-                npc.sizeXZ = 110;
-                npc.sizeY = 110;
-                break;
-            case 475:
-                npc.actions = new String[]{null, "Attack", null, null, null};
-                npc.models = new int[2];
-                npc.models[0] = 13558;
-                npc.name = "Immortal Spikerz";
-                npc.combatLevel = 160;
-                npc.standAnim = 808;
-                npc.walkAnim = 819;
-                npc.squaresNeeded = 1;
-                npc.sizeXZ = 110;
-                npc.sizeY = 110;
-                break;
-            case 484:
-                npc.actions = new String[]{"Pick up", null, null, null, null};
-                npc.models = new int[1];
-                npc.models[0] = 13558;
-                npc.name = "Spikerz pet";
-                npc.combatLevel = 0;
-                npc.description = "";
-                npc.standAnim = 808;
-                npc.walkAnim = 819;
-                npc.squaresNeeded = 2;
-                npc.sizeXZ = 65;
-                npc.sizeY = 65;
                 break;
             case 1598:
                 npc.actions = new String[]{null, "Attack", null, null, null};
@@ -1173,45 +901,6 @@ public final class NPCDef {
                 npc.combatLevel = 0;
                 npc.standAnim = 12021;
                 npc.walkAnim = 12023;
-                npc.squaresNeeded = 1;
-                npc.sizeXZ = 75;
-                npc.sizeY = 75;
-                break;
-            case 509:
-                npc.actions = new String[]{null, "Attack", null, null, null};
-                npc.models = new int[1];
-                npc.models[0] = 9980;
-                npc.name = "Exodia";
-                npc.combatLevel = 300;
-                npc.description = "";
-                npc.standAnim = 808;
-                npc.walkAnim = 819;
-                npc.squaresNeeded = 1;
-                npc.sizeXZ = 175;
-                npc.sizeY = 175;
-                npc.headIcon = 17;
-                break;
-            case 471:
-                npc.actions = new String[]{null, "Attack", null, null, null};
-                npc.models = new int[2];
-                npc.models[0] = 9980;
-                npc.name = "Immortal Exodia";
-                npc.combatLevel = 400;
-                npc.standAnim = 11973;
-                npc.walkAnim = 11975;
-                npc.squaresNeeded = 1;
-                npc.sizeXZ = 175;
-                npc.sizeY = 175;
-                break;
-            case 486:
-                npc.actions = new String[]{"Pick up", null, null, null, null};
-                npc.models = new int[1];
-                npc.models[0] = 9980;
-                npc.name = "Exodia pet";
-                npc.combatLevel = 0;
-                npc.description = "";
-                npc.standAnim = 11973;
-                npc.walkAnim = 11975;
                 npc.squaresNeeded = 1;
                 npc.sizeXZ = 75;
                 npc.sizeY = 75;
@@ -1412,17 +1101,6 @@ public final class NPCDef {
                 npc.squaresNeeded = 1;
                 npc.sizeXZ = 125;
                 npc.sizeY = 125;
-                break;
-            case 2305:
-                npc.name = "@gre@Green Hornet";
-                npc.actions = new String[]{null, "Attack", null, null, null};
-                npc.models = new int[]{90850, 90851, 91806, 91808, 91810, 91812, 91814, 91816};
-                npc.combatLevel = 10000;
-                npc.standAnim = 1501;
-                npc.walkAnim = 1851;
-                npc.sizeY = 200;
-                npc.sizeXZ = 200;
-                npc.squaresNeeded = 1;
                 break;
             case 464:
                 npc.actions = new String[]{null, "Attack", null, null, null};

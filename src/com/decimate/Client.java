@@ -18703,7 +18703,7 @@ if(canClick) {
                 case 10:
                     long timerLeft = inStream.readQWord();
                     int timerId = inStream.readInt();
-                    System.out.println("Reading time: " + timerLeft + " on " + timerId);
+                   // System.out.println("Reading time: " + timerLeft + " on " + timerId);
                     RSInterface.interfaceCache.get(timerId).timeLeft = timerLeft;
                     opCode = -1;
                     return true;

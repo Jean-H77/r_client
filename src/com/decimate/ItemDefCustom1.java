@@ -158,6 +158,7 @@ public class ItemDefCustom1 {
             case 693:
             case 691:
             case 1139:
+            case 14561:
                 itemDef.animateInventory = true;
                 break;
         }

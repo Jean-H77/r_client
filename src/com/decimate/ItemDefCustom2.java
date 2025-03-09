@@ -3775,7 +3775,7 @@ public class ItemDefCustom2 {
                 itemDef.maleEquip1 = 90888;
                 itemDef.femaleEquip1 = 90888;
                 break;
-            case 19786:
+           /* case 19786:
                 itemDef.name = "Staff offhand 6";
                 itemDef.modelZoom = 1180;
                 itemDef.rotationY = 339;
@@ -3787,7 +3787,7 @@ public class ItemDefCustom2 {
                 itemDef.modelID = 90885;
                 itemDef.maleEquip1 = 90886;
                 itemDef.femaleEquip1 = 90886;
-                break;
+                break;*/
             case 19784:
                 itemDef.name = "Staff 6";
                 itemDef.modelZoom = 2180;

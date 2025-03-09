@@ -628,8 +628,8 @@ public class Model extends Animable {
     }
 
     public static void initialise(int i, OnDemandFetcherParent onDemandFetcher) {
-        modelHeader = new ModelHeader[100100]; //ok it's 100k, let's see what u tried to access  // increased by 100
-        newmodel = new boolean[100100];
+        modelHeader = new ModelHeader[100600];
+        newmodel = new boolean[100600];
         resourceManager = onDemandFetcher;
     }
 
